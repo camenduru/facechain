@@ -243,7 +243,7 @@ def main_diffusion_inference_pose(pose_model_path, pose_image,
     else:
         add_prompt_style = ''
     # trigger_style = trigger_style + 'with <input_id> face, '
-    # pos_prompt = 'Generate a standard ID photo of a chinese {}, solo, wearing high-class business/working suit, beautiful smooth face, with high-class/simple pure color background, looking straight into the camera with shoulders parallel to the frame, smile, high detail face, best quality, photorealistic'.format(gender)
+    # pos_prompt = 'Generate a standard ID photo of a person {}, solo, wearing high-class business/working suit, beautiful smooth face, with high-class/simple pure color background, looking straight into the camera with shoulders parallel to the frame, smile, high detail face, best quality, photorealistic'.format(gender)
     pipe = pipe.to("cuda")
     # print(trigger_style + add_prompt_style + pos_prompt)
     images_style = txt2img_pose(pipe, pose_im, trigger_style + add_prompt_style + pos_prompt, neg_prompt, num_images=10)
@@ -335,7 +335,7 @@ def main_diffusion_inference_multi(pose_model_path, pose_image,
     else:
         add_prompt_style = ''
     # trigger_style = trigger_style + 'with <input_id> face, '
-    # pos_prompt = 'Generate a standard ID photo of a chinese {}, solo, wearing high-class business/working suit, beautiful smooth face, with high-class/simple pure color background, looking straight into the camera with shoulders parallel to the frame, smile, high detail face, best quality, photorealistic'.format(gender)
+    # pos_prompt = 'Generate a standard ID photo of a person {}, solo, wearing high-class business/working suit, beautiful smooth face, with high-class/simple pure color background, looking straight into the camera with shoulders parallel to the frame, smile, high detail face, best quality, photorealistic'.format(gender)
     pipe = pipe.to("cuda")
     # print(trigger_style + add_prompt_style + pos_prompt)
     images_style = txt2img_multi(pipe, control_im, trigger_style + add_prompt_style + pos_prompt, neg_prompt, num_images=10)

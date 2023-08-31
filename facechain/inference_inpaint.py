@@ -149,7 +149,7 @@ class GenPortraitInpaint:
 
         
         # setting prompt with original FaceChain training prompt engineering
-        pos_prompt = 'Generate a standard photo of a chinese , beautiful smooth face, smile, high detail face, best quality,'
+        pos_prompt = 'Generate a standard photo of a person, beautiful smooth face, smile, high detail face, best quality,'
         add_pos_prompt, add_neg_prompt = get_popular_prompts(instance_data_dir)
         input_prompt = pos_prompt + add_pos_prompt + inpaint_default_positive
         neg_prompt = add_neg_prompt + inpaint_default_negative 
